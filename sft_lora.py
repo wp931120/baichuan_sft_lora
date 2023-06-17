@@ -14,10 +14,10 @@ from peft import (
 import torch
 
 
-
-CUTOFF_LEN = 1024  # 1024 accounts for about 96% of the data
+### 定义一些配置信息
+CUTOFF_LEN = 1024  
 VAL_SET_SIZE = 2000
-DATA_PATH = "./dataset/Belle_open_source_0.5M.json" ## Choose dataset
+DATA_PATH = "./dataset/Belle_open_source_0.5M.json" 
 OUTPUT_DIR = "baichuansft"
 resume_from_checkpoint = "baichuansft"
 
