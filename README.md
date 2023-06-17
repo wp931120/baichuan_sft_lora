@@ -27,3 +27,6 @@ tensorboard  --logdir ./runs/ --bind_all
 
 ### sft后的效果
 TODO
+### Reference
+https://github.com/artidoro/qlora
+https://github.com/LianjiaTech/BELLE
