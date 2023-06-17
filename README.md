@@ -1,5 +1,5 @@
 # baichuan_sft_lora
-baichuan LLM surpervised finetune by lora
+baichuan LLM supervised finetune by lora
 
 ### 大模型
 百川7B 
