@@ -1,15 +1,15 @@
 # baichuan_sft_lora
 baichuan LLM surpervised finetune by lora
 
-###大模型
+### 大模型
 百川7B 
 https://huggingface.co/baichuan-inc/baichuan-7B
 
-###sft 数据集
+### sft 数据集
 采用的是belle 0.5M
 https://huggingface.co/datasets/BelleGroup/train_0.5M_CN
 
-###训练方法和过程可视化
+### 训练方法和过程可视化
 + 先建百川LLM 采用qlora的量化方式进行量化
 + 在采用lora进行指令微调
 + 训练过程采用tensorborad 可视化,执行下方代码即可在localhost:6006去监控你的训练和测试loss
@@ -19,8 +19,9 @@ tensorboard  --logdir ./runs/ --bind_all
 
 
 
-###资源消耗
-只需要12G左右的显存
+### 资源消耗
+由于采用了量化lora等技术
+整个资源消耗只需要12G左右的显存
 
-###sft后的效果
+### sft后的效果
 TODO
