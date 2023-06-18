@@ -23,7 +23,7 @@ model = AutoModelForCausalLM.from_pretrained("./baichuan-7B",
                                              device_map=device_map)
 
 ###组装lora
-LORA_WEIGHTS = "./baichuansft/checkpoint-6000/"
+LORA_WEIGHTS = "./baichuansft/"
 device = "cuda:0"
 model_lora = PeftModel.from_pretrained(
     model,
@@ -31,30 +31,24 @@ model_lora = PeftModel.from_pretrained(
 ).to(device)
 
 
-
 ###进行预测
 device = "cuda:0"
-
 from transformers import  GenerationConfig
 generation_config = GenerationConfig(
-        temperature=0.1,
+        temperature=0.2,
         top_p = 0.85,
-        do_sample = False,
-        repetition_penalty=2.0,
-        # eos_token_id=2,
-        # bos_token_id=1,
-        # pad_token_id=0,
+        do_sample = True, 
+        repetition_penalty=2.0, 
         max_new_tokens=1024,  # max_length=max_new_tokens+input_sequence
 
 )
+
 prompt = """
-       请告诉我高血压该怎么治疗
+      北京有啥好玩的地方
        """
-inputttext ="""###Human:
-     {}
-###Assistant:\n:
+inputttext ="""###Human:\n{}###Assistant:\n:
 """.format(prompt)
-inputs = tokenizer(inputttext, return_tensors="pt").to(device)
+inputs = tokenizer(prompt,return_tensors="pt").to(device)
 generate_ids = model_lora.generate(**inputs, generation_config=generation_config)
-output = tokenizer.decode(generate_ids[0][1:-1])
+output = tokenizer.decode(generate_ids[0])
 print(output)
