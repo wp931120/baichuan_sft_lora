@@ -35,7 +35,7 @@ bot: 台北有哪些值得一去的景点?
 
 human :北京有啥好玩的地方
 
-bot: <a href="http://www.bj-tourisme" target=_blank>北京旅游网</A><BR<br />
+bot:   <A href="http://www.bj-tourisme" target=_blank>北京旅游网</A><BR<br />
 
 微调后：
 
