@@ -1,6 +1,10 @@
 # baichuan_sft_lora
 baichuan LLM supervised finetune by lora
 项目的主要动机由于百川baichuan -7B是一个pretrain的大模型，尽管它在一些评估数据集上效果很好，但是并不能开箱即用，因为它没有 supervised finetune 这一步，没有和人类意图进行对齐，经常听不懂你下达的指令。遂利用belle 0.5M 指令微调数据，采用qlora的量化微调的方式对百川大模型进行人类意图对齐训练。
+
+博客地址
+https://zhuanlan.zhihu.com/p/637785176
+
 ### 大模型
 百川7B 
 https://huggingface.co/baichuan-inc/baichuan-7B
