@@ -5,6 +5,9 @@ baichuan LLM supervised finetune by lora
 博客地址
 https://zhuanlan.zhihu.com/p/637785176
 
+### lora模型地址
+https://huggingface.co/wp931120x/baichuan_4bit_lora
+
 ### 大模型
 百川7B 
 https://huggingface.co/baichuan-inc/baichuan-7B
