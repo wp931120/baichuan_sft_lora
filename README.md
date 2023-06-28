@@ -17,6 +17,7 @@ https://huggingface.co/baichuan-inc/baichuan-7B
 https://huggingface.co/datasets/BelleGroup/train_0.5M_CN
 
 ### 训练方法和过程可视化
++ 训练前置条件,先从huggingface 中将baichuan7b 大模型权重 ,然后将 belle 数据集 train_0.5M_CN 下载到本地放到项目目录下的dataset文件夹下，最后运行sft_lora.py 脚本
 + 先将百川LLM 采用qlora的 nf4 和双重量化方式进行量化
 + 在采用lora进行指令微调
 + 训练过程采用tensorborad 可视化,执行下方代码即可在localhost:6006去监控你的训练和测试loss
